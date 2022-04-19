@@ -344,62 +344,12 @@ h6 {
   width: 100%;
   overflow: hidden;
   position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 0;
   margin-top: 4rem;
-  align-items:unset !important;
+  align-items: unset !important;
 }
-
-#hero .slider1 {
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: url(/assets/img/slider/slider1.jpg);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation: fadeIn 8s linear infinite alternate;
-  animation-fill-mode: forwards;
-}
-
-#hero .slider2 {
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: url(/assets/img/slider/slider2.jpg);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation: fadeIn 8s linear infinite alternate;
-  animation-fill-mode: forwards;
-}
-
-#hero .slider3 {
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: url(/assets/img/slider/slider3.jpg);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  animation: fadeIn 8s linear infinite alternate;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  8% {
-    opacity: 1;
-  }
-
-  92% {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
 
 #hero .carousel-container {
   display: flex;
@@ -408,8 +358,16 @@ h6 {
   flex-direction: column;
   text-align: center;
   position: relative;
-  height: 70vh;
-  padding-top: 60px;
+  height: 60vh;
+}
+
+#hero .carousel-container img {
+  max-width: 100%;
+  object-fit: scale-down;
+}
+
+#hero .carousel-text {
+  padding-bottom: 8rem !important;
 }
 
 #hero h2 {
@@ -417,7 +375,7 @@ h6 {
   margin-bottom: 30px;
   font-size: 60px;
   font-weight: 700;
-  text-shadow: 0px 0px 30px rgb(0, 0, 0);
+  text-shadow: black 0.1em 0.1em 0.2em;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
@@ -427,10 +385,14 @@ h6 {
   font-size: 24px;
   font-weight: 400;
   -webkit-animation-delay: 0.8s;
-  text-shadow: rgb(0, 0, 0) 0px 0px 40px;
+  text-shadow: black 0.1em 0.1em 0.2em;
   animation-delay: 0.8s;
   margin: 0 auto 30px auto;
   color: #fff;
+}
+
+#hero a {
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 #hero .carousel-control-prev,
@@ -482,9 +444,36 @@ h6 {
   }
 }
 
+@media (max-width: 1024px) {
+  #hero .carousel-container {
+    height: 40vh;
+  }
+
+  #hero .carousel-text {
+    padding-bottom: 2rem !important;
+  }
+
+  #hero h2 {
+    font-size: 40px;
+  }
+
+  #hero p {
+    font-size: 20px;
+  }
+
+  #hero .btn-get-started{
+    padding: 10px 24px;
+  }
+
+}
+
 @media (max-width: 768px) {
   #hero .carousel-container {
     height: 50vh;
+  }
+
+  #hero .carousel-text {
+    padding-bottom: 3rem !important;
   }
 
   #hero h2 {
@@ -493,6 +482,31 @@ h6 {
 
   #hero p {
     font-size: 16px;
+  }
+
+  #hero .btn-get-started{
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 540px) {
+
+  #hero .carousel-text {
+    padding-bottom: 6rem !important;
+  }
+
+  #hero h2 {
+    font-size: 30px;
+  }
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  #hero .btn-get-started{
+    padding: 8px 20px;
+    margin: 2px 10px 18px 10px;
+    font-size: 12px;
   }
 }
 
