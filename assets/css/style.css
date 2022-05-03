@@ -358,15 +358,16 @@ h6 {
   flex-direction: column;
   text-align: center;
   position: relative;
-  height: 60vh;
+  height: 80vh;
 }
 
 #hero .carousel-container img {
   max-width: 100%;
+  margin-bottom: 150px;
 }
 
 #hero .carousel-text {
-  padding-bottom: 6rem !important;
+  padding-bottom: 12rem !important;
 }
 
 #hero h2 {
@@ -382,7 +383,7 @@ h6 {
 #hero p {
   width: 80%;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   -webkit-animation-delay: 0.8s;
   text-shadow: black 0.1em 0.1em 0.2em;
   animation-delay: 0.8s;
@@ -454,7 +455,7 @@ h6 {
   }
 
   #hero .carousel-text {
-    padding-bottom: 2rem !important;
+    padding-bottom: 5rem !important;
   }
 
   #hero h2 {
@@ -652,7 +653,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  padding-top: 80px;
+  padding-top: 0px;
 }
 
 .about .content h3 {
@@ -764,6 +765,10 @@ section {
 }
 
 @media (max-width: 575px) {
+  .features {
+    padding-top: 0px;
+  }
+  
   .features .nav-link {
     padding: 15px;
   }
