@@ -757,11 +757,23 @@ section {
   border-color: #ef6603;
 }
 
+.features .nav-item svg{
+  width: 48px;
+  height: 48px;
+}
+
 @media (max-width: 768px) {
   .features .nav-link i {
     padding: 0;
     line-height: 1;
     font-size: 36px;
+  }
+  .features .nav-item{
+    padding: 0px 5px;
+  }
+  .features .nav-item svg{
+    width: 30px;
+    height: 30px;
   }
 }
 
