@@ -519,6 +519,18 @@ h6 {
   }
 }
 
+@media (max-width: 400px) {
+  #hero h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  #hero p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
 .hero-waves {
   display: block;
   width: 100%;
@@ -757,7 +769,7 @@ section {
   border-color: #ef6603;
 }
 
-.features .nav-item svg{
+.features .nav-item svg {
   width: 48px;
   height: 48px;
 }
@@ -768,10 +780,12 @@ section {
     line-height: 1;
     font-size: 36px;
   }
-  .features .nav-item{
+
+  .features .nav-item {
     padding: 0px 5px;
   }
-  .features .nav-item svg{
+
+  .features .nav-item svg {
     width: 30px;
     height: 30px;
   }
