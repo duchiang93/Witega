@@ -46,6 +46,8 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="form/contact.css" />
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -505,15 +507,14 @@
                       <h4 style="display: inline; font-weight: 700">
                         無線超音波腰眼面積測定機
                       </h4>
-                    </li>
-                    <p>
-                      檢測腰眼面積，選種育種，屠體評級，精準快速測定！<a
+                      <a
                         href="./product/RL1.html"
                         target="_blank"
                         rel="noreferrer noopenner"
                         >詳細規格</a
                       >
-                    </p>
+                    </li>
+                    <p>檢測腰眼面積，選種育種，屠體評級，精準快速測定！</p>
                     <li>
                       <i class="ri-check-double-line"></i>
                       <h4 style="display: inline; font-weight: 700">
@@ -1635,64 +1636,128 @@
               </div>
             </div>
 
+            <!-- 
+    =======================================================================
+
+    This is a working contact form. To receive email, 
+    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+
+    Create Access Key here 👉 https://web3forms.com/
+
+    =======================================================================
+ -->
             <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
               <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                id="form"
+                class="needs-validation"
+                novalidate
               >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="3a1518fb-ec7d-44f2-acc8-d6fdb99a3409"
+                />
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="New Submission from Web3Forms"
+                />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  id=""
+                  style="display: none"
+                />
+
                 <div class="row">
                   <div class="col-md-6 form-group">
+                    <label
+                      for="name"
+                      class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                      >姓名</label
+                    >
                     <input
                       type="text"
                       name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Your Name"
+                      id="first_name"
+                      placeholder="姓名"
                       required
+                      class="form-control"
                     />
+                    <div
+                      class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                    >
+                      請輸入姓名。
+                    </div>
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <label
+                      for="phone"
+                      class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                      >電話</label
+                    >
                     <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
+                      type="phone"
+                      name="phone"
+                      id="phone"
+                      placeholder="09xx-xxx-xxx"
                       required
+                      class="form-control"
                     />
+                    <div class="invalid-feedback text-red-400 text-sm mt-1">
+                      請輸入正確的電話格式。
+                    </div>
                   </div>
                 </div>
                 <div class="form-group mt-3">
+                  <label
+                    for="subject"
+                    class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                    >主旨</label
+                  >
                   <input
                     type="text"
                     class="form-control"
                     name="subject"
                     id="subject"
-                    placeholder="Subject"
+                    placeholder="主旨"
                     required
                   />
-                </div>
-                <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="5"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your message has been sent. Thank you!
+                  <div
+                    class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                  >
+                    請輸入主旨。
                   </div>
                 </div>
+
+                <div class="form-group mt-3">
+                  <label
+                    for="message"
+                    class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
+                    >訊息</label
+                  >
+
+                  <textarea
+                    rows="5"
+                    name="message"
+                    id="message"
+                    placeholder="訊息"
+                    class="form-control"
+                    required
+                  ></textarea>
+                  <div
+                    class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                  >
+                    請輸入訊息。
+                  </div>
+                </div>
+
                 <div class="text-center">
                   <button type="submit">送出</button>
                 </div>
+                <p class="text-base text-center text-gray-400" id="result"></p>
               </form>
             </div>
           </div>
@@ -1748,6 +1813,7 @@
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="form/contact.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
